@@ -283,7 +283,7 @@ class BcilDcmConvert:
                     for root, dirs, files in os.walk(top=folder):
                         s_files = sorted(files)
                         for file in s_files:
-                            if file.endswith((".ima", ".dcm", ".dic", ".dc3", ".dicom")) \
+                            if file.endswith((".IMA", ".ima", ".dcm", ".dic", ".dc3", ".dicom")) \
                                     or (file.isalnum() and len(file) == 8):  # 指定拡張子or拡張子なし8文字の英数ファイル名
                                 file_full_path = os.path.join(root, file)
                                 out_f.write(file_full_path + '\n')
